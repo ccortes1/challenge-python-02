@@ -1,11 +1,26 @@
 # Resolve the problem!!
+import random
 import string
 
 SYMBOLS = list('!"#$%&\'()*+,-./:;?@[]^_`{|}~')
 
 
 def generate_password():
-    # Start coding here
+    
+    Secure_Password = False
+    
+    while Secure_Password == False:
+        password = ''.join(random.choice(string.ascii_letters + string.digits + string.punctuation) for x in range(random.randrange(7,17)))
+        
+
+        if validate(password):
+            Secure_Password = True
+            return password
+
+    
+        
+
+    
 
 
 def validate(password):
